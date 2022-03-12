@@ -1,0 +1,181 @@
+/* Start Variables */
+:root {
+    --main-color: #10cab7;
+    --sec-color: #2c4755;
+    --section-background: #f6f6f6;
+    --main-trans-duration: .3s;
+    --main-sec-padding: 40px;
+}
+/* End Variables */
+/* Start Components  */
+
+/* End Components  */
+/* Start Global Values */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Values */
+/* Start Header  */
+header {
+    padding: 20px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Start Header Logo  */
+header .container .logo img {
+    width: 60px;
+}
+/* End Header Logo  */
+/* Start Header Nav  */
+header .container nav {
+    position: relative;
+}
+header .container nav .hover-nav {
+    position: absolute;
+    background-color: transparent;
+    height: 50px;
+    width: 30px;
+    top: -7px;
+    z-index: 2;
+}
+header .container nav .hover-nav:hover ~ ul ,
+header .container nav:hover ul {
+    display: block;
+}
+/* Start Header Nav Icon */
+header .container nav .icon {
+    width: 30px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header .container nav .icon div {
+    background-color: var(--sec-color, #2c4755);
+    height: 2px;
+    width: 100%;
+}
+header .container nav .icon div:nth-child(2) {
+    align-self: flex-end;
+    transition: var(--main-trans-duration, .3s);
+}
+header .container nav:hover .icon div:nth-child(2) {
+    width: 60%;
+}
+/* End Header Nav Icon */
+/* Start Header Nav List  */
+header .container nav ul {
+    width: 180px;
+    position: absolute;
+    top: 42px;
+    right: -10px;
+    z-index: 1;
+    display: none;
+}
+header .container nav ul::before {
+    content: '';
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    top: -30px;
+    right: 10px;
+}
+header .container nav ul li {
+    list-style: none;
+    background-color: #f6f6f6;
+    padding: 15px;
+    transition: padding var(--main-trans-duration, .3s) ,
+                color var(--main-trans-duration, .3s);
+}
+header .container nav ul li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+header .container nav ul li:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+/* this line make the row of the nav with the same color of the hover color for the list items  */
+header .container nav ul li:first-child:hover + div {
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent #f3f3f3 transparent;
+    position: absolute;
+    top: -30px;
+    right: 10px;
+}
+header .container nav ul li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+header .container nav ul li:hover {
+    padding-left: 20px;
+    background-color: #f3f3f3;
+}
+header .container nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+/* End Header Nav List  */
+/* End Header Nav  */
+/* End Header  */
+/* Start Landing Section  */
+main {
+    background-image: url(../imgs/landing.jpg);
+    background-size: cover;
+    height: calc(100vh - 68.39px);
+    position: relative;
+}
+main .container-land {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    text-align: center;
+}
+main .container-land h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+main .container-land p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+/* End Landing Section  */
