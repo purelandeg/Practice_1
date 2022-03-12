@@ -7,9 +7,6 @@
     --main-sec-padding: 40px;
 }
 /* End Variables */
-/* Start Components  */
-
-/* End Components  */
 /* Start Global Values */
 * {
     -webkit-box-sizing: border-box;
@@ -46,6 +43,50 @@ body{
     }
 }
 /* End Global Values */
+/*** Start Components  ***/
+/* Start component one  [arrange items by grid] */
+.arrange-by-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+/* End component one  */
+/* Start component Two  [Specia Heading] */
+.special-heading {
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    color: #ebeced;
+    text-align: center;
+    margin: 0;
+}
+.special-heading + p {
+    font-size: 20px;
+    margin: -30px 0 0;
+    color: #797979;
+    text-align: center;
+}
+@media (max-width:767px) {
+    .special-heading {
+        font-size: 80px;
+    }
+    .special-heading + p {
+    font-size: 18px;
+    }
+}
+/* End component Two  */
+/* Start component Three [small paragraghs] */
+.head-of-small-para {
+    font-weight: 800;
+}
+.small-para {
+    line-height: 1.6;
+    text-align: center;
+    color: #777;
+    tab-size: 18px;
+}
+/* End component Three  */
+/*** End Components  ***/
 /* Start Header  */
 header {
     padding: 20px;
@@ -179,3 +220,31 @@ main .container-land p {
     line-height: 1.8;
 }
 /* End Landing Section  */
+/* Start the second section  */
+.second-sec {
+    padding-top: var(--main-sec-padding);
+    padding-bottom: var(--main-sec-padding);
+    background-color: var(--section-background);
+}
+.second-sec .column {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.second-sec .column i {
+    color: var(--main-color);
+}
+.second-sec .column h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.second-sec .column p {
+    line-height: 1.6;
+    text-align: center;
+    color: #777;
+    tab-size: 18px;
+}
+/* End the second section  */
+/* Start Services  */
+/* End Services  */
