@@ -51,7 +51,7 @@ body{
     gap: 10px;
 }
 /* End component one  */
-/* Start component Two  [Specia Heading] */
+/* Start component Two  [Special Heading] */
 .special-heading {
     font-size: 100px;
     font-weight: 800;
@@ -75,17 +75,6 @@ body{
     }
 }
 /* End component Two  */
-/* Start component Three [small paragraghs] */
-.head-of-small-para {
-    font-weight: 800;
-}
-.small-para {
-    line-height: 1.6;
-    text-align: center;
-    color: #777;
-    tab-size: 18px;
-}
-/* End component Three  */
 /*** End Components  ***/
 /* Start Header  */
 header {
@@ -160,8 +149,7 @@ header .container nav ul li {
     list-style: none;
     background-color: #f6f6f6;
     padding: 15px;
-    transition: padding var(--main-trans-duration, .3s) ,
-                color var(--main-trans-duration, .3s);
+    transition: padding var(--main-trans-duration, .3s) ,color var(--main-trans-duration, .3s);
 }
 header .container nav ul li:not(:last-child) {
     border-bottom: 1px solid #ddd;
@@ -243,8 +231,9 @@ main .container-land p {
     line-height: 1.6;
     text-align: center;
     color: #777;
-    tab-size: 18px;
+    font-size: 18px;
 }
 /* End the second section  */
 /* Start Services  */
+
 /* End Services  */
