@@ -86,7 +86,7 @@ body{
     .special-heading + p {
     font-size: 13px;
     margin: -20px;
-    width: 300px;
+    max-width: 200px;
     }
 }
 /* End component Two  */
