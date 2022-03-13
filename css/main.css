@@ -45,6 +45,16 @@ body{
         width: 1150px;
     }
 }
+@media (max-width:320px) {
+    .container {
+        width: 260px;
+    }
+}
+/* @media(max-width: 279px) {
+    .container {
+        width: 259px;
+    }
+} */
 /* End Global Values */
 /*** Start Components  ***/
 /* Start component one  [arrange items by grid] */
@@ -71,10 +81,11 @@ body{
 }
 @media (max-width:767px) {
     .special-heading {
-        font-size: 80px;
+        font-size: 60px;
     }
     .special-heading + p {
-    font-size: 18px;
+    font-size: 13px;
+    margin: -20px;
     }
 }
 /* End component Two  */
@@ -213,12 +224,29 @@ main .container-land p {
     font-weight: 300;
     line-height: var(--special-line-height);
 }
+@media (max-width:320px) {
+    main .container-land {
+        max-width: 250px;
+    }
+    main .container-land h1 {
+        font-size: 40px;
+        margin-right: 0px;
+    }
+    main .container-land p {
+        font-size: 17px;
+    }
+}
 /* End Landing Section  */
 /* Start the second section  */
 .second-sec {
     padding-top: var(--main-sec-padding);
     padding-bottom: var(--main-sec-padding);
     background-color: var(--section-background);
+}
+@media (max-width:320px) {
+    .second-sec .container.arrange-by-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
 }
 .second-sec .column {
     padding: 20px;
@@ -233,11 +261,21 @@ main .container-land p {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+@media (max-width:320px) {
+    .second-sec .container.arrange-by-grid .column h3 {
+        font-size: 14px;
+    }
+}
 .second-sec .column p {
     line-height: var(--main-line-height);
     text-align: center;
     color: #777;
     font-size: 18px;
+}
+@media (max-width:320px) {
+    .second-sec .container.arrange-by-grid .column p {
+        font-size: 15px;
+    }
 }
 /* End the second section  */
 /* Start Services  */
@@ -250,6 +288,11 @@ main .container-land p {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
+}
+@media (max-width:320px) {
+    .services-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
 }
 .services-container .serv {
     min-height: 200px;
@@ -314,6 +357,13 @@ main .container-land p {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
 }
+@media(max-width: 320px) {
+    .portfolio .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        margin-top: 50px;
+    }
+}
 .portfolio .cards-container .card {
 background-color: white;
 }
@@ -330,6 +380,11 @@ background-color: white;
     font-weight: 400;
     color: #777;
     line-height: var(--main-line-height);
+}
+@media (max-width:320px) {
+    .portfolio .cards-container .card .text p {
+        font-size: 13px;
+    }
 }
 /* End portfolio  */
 /* Start About  */
@@ -444,6 +499,12 @@ background-color: white;
         font-size: 25px;
     }
 }
+@media(max-width: 320px) { 
+    .contact-container .email p {
+        margin-top: 37px;
+        font-size: 15px;
+    }
+}
 .contact-container .email a {
     color: var(--main-color);
     text-decoration: none;
@@ -452,7 +513,11 @@ background-color: white;
 }
 @media (max-width:786px) {
     .contact-container .email a {
-        font-size: 25px;
+        font-size: 19px;
+    }
+}@media(max-width: 320px) {
+    .contact-container .email a {
+        font-size: 19px;
     }
 }
 .contact-container .social {
@@ -463,11 +528,21 @@ background-color: white;
 .contact-container .social * {
     margin-right: 8px;
 }
+@media(max-width: 320px) {
+    .contact-container .social p {
+        font-size: 11px;
+    }
+}
 .contact-container .social a {
     color: var(--sec-color);
 }
 .contact-container .social a:hover {
     color: var(--main-color);
+}
+@media (max-width: 320px) {
+    .contact-container .social > *{
+        margin-right: 3px;
+    }
 }
 /* End Contact  */
 /* Start Footer  */
@@ -480,6 +555,11 @@ footer {
 footer p {
     color: white;
     font-size: 18px;
+}
+@media (max-width:320px) {
+    footer p {
+        font-size: 13px;
+    }
 }
 footer span {
     color: var(--main-color);
